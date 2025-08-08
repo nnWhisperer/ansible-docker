@@ -1,4 +1,12 @@
 ---
+- name: Install docker-systemctl-replacement
+  ansible.builtin.get_url:
+    url: "https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py"
+    dest: "/usr/bin/systemctl"
+    mode: "0755"
+    backup: true
+  when: ansible_virtualization_type == "docker"
+
 - name: Disable pinned Docker version
   ansible.builtin.file:
     dest: "/etc/apt/preferences.d/docker.pref"
