@@ -23,15 +23,15 @@ with it then check out
 
 - Ubuntu 22.04 LTS (Jammy Jellyfish)
 - Ubuntu 24.04 LTS (Noble Numbat)
-- Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
+- Debian 13 (Trixie)
 
 Previous releases may or may not work but they're not officially supported.
 
 ---
 
 *You are viewing the master branch's documentation which might be ahead of the
-latest release. [Switch to the latest release](https://github.com/nickjj/ansible-docker/tree/v2.5.2).*
+latest release. [Switch to the latest release](https://github.com/nickjj/ansible-docker/tree/v2.5.3).*
 
 ---
 
@@ -357,7 +357,6 @@ docker__package_dependencies:
   - "ca-certificates"
   - "cron"
   - "gnupg2"
-  - "software-properties-common"
 
 # Ansible identifies CPU architectures differently than Docker.
 docker__architecture_map:
